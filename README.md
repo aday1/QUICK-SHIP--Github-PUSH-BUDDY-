@@ -149,7 +149,7 @@ flowchart TD
     E --> F[💭 Need a commit message?]
     F --> G[📝 Type your commit message<br/>or use auto-generated one]
     
-    G --> H[🚀 git commit -m "your message"]
+    G --> H[🚀 git commit with message]
     H --> I{Push to remote?}
     
     I -->|Hell yeah!| J[📡 git push origin branch]
