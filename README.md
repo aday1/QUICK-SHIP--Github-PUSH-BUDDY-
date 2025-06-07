@@ -135,6 +135,50 @@ When you've got changes but need the latest stuff:
 ╚══════════════════════════════════════════════════════════╝
 ```
 
+## 🍺 WTF Is Actually Happening? (The Flow Chart)
+
+Here's a proper diagram showing what this bloody thing does when you hit QUICK SHIP:
+
+```mermaid
+flowchart TD
+    A[🍺 Start: You've got messy code] --> B{Any changes to commit?}
+    B -->|Nah, all good| C[😴 Nothing to do mate<br/>Have a beer 🍺]
+    B -->|Yeah, heaps| D[🧹 Clean up the junk<br/>package-lock.json, logs, etc.]
+    
+    D --> E[📦 Stage everything<br/>git add .]
+    E --> F[💭 Need a commit message?]
+    F --> G[📝 Type your commit message<br/>or use auto-generated one]
+    
+    G --> H[🚀 git commit -m "your message"]
+    H --> I{Push to remote?}
+    
+    I -->|Hell yeah!| J[📡 git push origin branch]
+    I -->|Nah, local only| K[✅ Done! Crack a tinny 🍺]
+    
+    J --> L{Push successful?}
+    L -->|Sweet as!| M[🎉 SUCCESS!<br/>Time for a celebratory beer 🍺🍺]
+    L -->|Stuffed up| N[😱 Error occurred]
+    
+    N --> O[🤔 Check the error message]
+    O --> P[🔧 Fix authentication/network]
+    P --> Q[🍻 Have a beer while fixing]
+    Q --> J
+    
+    M --> R[🏖️ Sit back and relax<br/>Your code is shipped! 🚢]
+    
+    style A fill:#ff9999
+    style M fill:#99ff99
+    style R fill:#99ccff
+    style C fill:#ffff99
+    style K fill:#ffff99
+    style Q fill:#ffcc99
+```
+
+**Legend:**
+- 🍺 = Mandatory beer breaks
+- 🍻 = Problem-solving beer (extra important)
+- 🚢 = Your code sailing off into the sunset
+
 ## 🛠️ Setup (Dead Simple)
 
 ### What You Need
